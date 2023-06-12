@@ -5,3 +5,6 @@
 .idea/
 *.iml 
 .classpath
+/projects/*
+*.json
+/bin/

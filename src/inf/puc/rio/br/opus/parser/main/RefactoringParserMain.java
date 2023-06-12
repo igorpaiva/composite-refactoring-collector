@@ -41,11 +41,11 @@ public class RefactoringParserMain {
     
 	public static void main(String[] args) {
 
-		String projectName = "realm-java";
-        String projectPath = "C:\\Users\\anaca\\OneDrive\\PUC-Rio\\OPUS\\CompositeRefactoring\\ICSE2023\\projects\\source-code\\projects\\realm-java";
-		RefactoringParserMain parserMain = new RefactoringParserMain(projectName, projectPath, "master");
+		String projectName = "fresco";
+        String projectPath = "projects/fresco";
+		RefactoringParserMain parserMain = new RefactoringParserMain(projectName, projectPath, "main");
 		
-        List<Refactoring> refactorings = parserMain.getRefactoringsFromRefMinerJson("refactorings\\" + projectName + "-refactorings.json");
+        List<Refactoring> refactorings = parserMain.getRefactoringsFromRefMinerJson(projectName + "-refactorings.json");
 
 		parserMain.writeRefactoringsToJson(projectName + "-refactorings.json", refactorings);
 	}
